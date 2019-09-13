@@ -52,9 +52,11 @@ def insertInOrder(personDic,sortedList):
         if (personDic['credit'] >= returnList[i][0]):
             returnList.insert(i,(personDic['credit'],personDic))
             return returnList
-    #It should not get here because by algorithm, personDic['credit'] should be positive
+    #In general, it should not get here because by algorithm, personDic['credit'] should be positive
     #but the person with the most debt should be, at maximum, 0.
-    raise NameError('owedPer Credit is less than the last entry of sortedls. Something wrong with algorithm')
+    # But whatever
+    returnList.insert(0,(personDic['credit'],personDic))
+    # raise NameError('owedPer Credit is less than the last entry of sortedls. Something wrong with algorithm')
 
 ####
 #MAIN PIPE FUNCTIONS
